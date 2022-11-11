@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Angular</title>
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-danger mb-4">¿Qué es Angular?</h1>
+                <div id="queEs">
+                    <div class="row">
+                        <div class="col">
+
+                            <ul>
+                                <li>Framework para para aplicaciones web desarrollado en<button type="button"
+                                        class="fw-bold btn-link bg-dark link-danger" data-bs-toggle="modal"
+                                        data-bs-target="#typescriptModal">Typescript</button>.</li>
+                                <li>Código abierto.</li>
+                                <li>Mantenido por Google.</li>
+                                <li>Objetivo: aumentar las aplicaciones basadas en navegador con capacidad de <button
+                                        type="button" class="fw-bold btn-link bg-dark link-danger"
+                                        data-bs-toggle="modal" data-bs-target="#mvcModal">Modelo Vista Controlador
+                                        (MVC)</button>.</li>
+                                </li>
+                                <li>Se basa en clases tipo "Componentes", cuyas propiedades son las usadas para hacer el
+                                    binding de los
+                                    datos. En dichas clases tenemos propiedades (variables) y métodos (funciones a
+                                    llamar).</li>
+                            </ul>
+                        </div>
+                        <div class="col-4 mb-2 text-center site-logos">
+                            <div class="col">
+                                <img src="img/angular_gmail.png">
+                                <img src="img/angular_microsoftOffice.png">
+                            </div>
+                            <div class="col">
+                                <img src="img/angular_paypal.png">
+                                <img src="img/angular_samsung.png">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3 class="text-danger mb-4">Instalación <span onclick="changeIcon(this)"
+                        class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse"
+                        data-bs-target="#instalacion" aria-expanded="false" aria-controls="instalacion"></span></h3>
+                <div class="collapse" id="instalacion">
+                    <p>Para instalar Angular en tu sistema local necesitas:
+                    <ul>
+                        <li>Node.js</li>
+                        <li>npm package manager</li>
+                    </ul>
+                    </p>
+                    <h3 class="text-danger mb-4">Angular CLI</h3>
+                    <div class="row d-flex align-items-center">
+                        <p>Utilizado para crear proyectos, generar aplicaciones y librería de código, además de tareas
+                            de
+                            desarrollo como pruebas o implementación.</p>
+                        <div class="col-4 mb-4 text-end">
+                            <img src="img/ejemplo_instalarAngular.PNG" class="mt-2 rounded border border-danger"
+                                alt="ejemplo de instalación">
+                        </div>
+                        <div class="col-8">
+                            <ul>
+                                <li>Para instalar CLI de Angular, abre una terminal y ejecuta el siguiente comando:
+                                    <span class="text-success fw-bold">npm install -g @angular/cli</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col">
+                <h3 class="text-danger mb-4">Workspace y aplicacion inicial <span onclick="changeIcon(this)"
+                        class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse"
+                        data-bs-target="#workspaceInicial" aria-expanded="false"
+                        aria-controls="workspaceInicial"></span></h3>
+                <div class="collapse" id="workspaceInicial">
+                    <div class="row">
+                        <div class="col-2 mb-4 text-end">
+                            <img src="img/ejemplo_nuevaApp.PNG" class="mt-2 rounded border border-danger"
+                                alt="ejemplo nueva app">
+                        </div>
+                        <div class="col-8">
+                            <ol>
+                                <li>Ejecutar el comando CLI <span class="text-success fw-bold">ng new</span> y asignarle
+                                    un nombre
+                                    deseado,
+                                    ejemplo: <span class="text-success fw-bold">my-app</span></li>
+                                <li>El comando <span class="text-success fw-bold">ng new</span> solicita información
+                                    sobre funciones que
+                                    serán incluidas. Se debe aceptar los valores predeterminados presionando la tecla
+                                    Enter o
+                                    Volver.</li>
+
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <h3 class="text-danger mb-4">Ejecutar la aplicación <span onclick="changeIcon(this)"
+                        class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse"
+                        data-bs-target="#ejecutarApp" aria-expanded="false" aria-controls="ejecutarApp"></span></h3>
+
+                <div class="collapse" id="ejecutarApp">
+                    <div class="row d-flex align-items-center">
+                        <p>Angular CLI ya trae incorporado un servidor para que el usuario pueda construir su aplicación
+                            de
+                            manera local.</p>
+                        <div class="col-2 mb-4 text-end">
+                            <img src="img/ejemplo_levantarServer.PNG" class="mt-2 rounded border border-danger"
+                                alt="ejemplo servidor">
+                        </div>
+                        <div class="col-10">
+                            <ol>
+                                <li>Debemos navegar a la carpeta donde se encuentra el workspace creado anteriormente
+                                    <span class="text-success fw-bold">my-app</span></li>
+                                <li>Ejecutar el comando <span class="text-success fw-bold">cd my-app</span> para
+                                    ubicarnos
+                                    dentro de nuestro proyecto Angular y luego ejecutamos el comando <span
+                                        class="text-success fw-bold">ng
+                                        serve --open</span></li>
+                            </ol>
+                        </div>
+
+                        <div class="col-12">
+                            <p><span class="text-success fw-bold">ng serve</span> inicia el servidor, y modifica la
+                                aplicación a medida
+                                que
+                                se realizan cambios. La dirección de este servidor es <span
+                                    class="text-success fw-bold">http://localhost:4200/</span></p>
+                        </div>
+                        <div class="col-12 text-center mx-auto">
+                            <img src="img/ejemplo_server.PNG" class="rounded border border-danger"
+                                alt="ejemplo servidor" style="height: 70vh">
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3 class="text-danger mb-4">Conceptos clave para entender Angular <span onclick="changeIcon(this)"
+                        class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse"
+                        data-bs-target="#conceptosClave" aria-expanded="false" aria-controls="conceptosClave"></span>
+                </h3>
+                <div class="collapse" id="conceptosClave">
+                    <ul>
+                        <li class="mb-2"><a href="angular_components.html" class="text-decoration-none text-success fw-bold">Components</a></li>
+                        <li class="mb-2"><a href="angular_templates_y_directives.html" class="text-decoration-none text-success fw-bold">Templates y
+                                directives</a></li>
+                        <li class="mb-2"><a href="angular_dependencyInjection.html" class="text-decoration-none text-success fw-bold">Dependency injection</a></li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3 class="text-danger mb-4">¿Cuándo usar Angular?<span onclick="changeIcon(this)"
+                        class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse" data-bs-target="#cuandoUsar"
+                        aria-expanded="false" aria-controls="cuandoUsar"></span></h3>
+                <div class="collapse" id="cuandoUsar">
+                    <p>Cuando se tienen aplicaciones web con <span class="text-danger fw-bold">servicio online, formularios y procesos con respuesta
+                        inmediata del servidor.</span>
+                    </p>
+                    <p>También para el <span class="text-danger fw-bold">desarrollo de apps tanto híbridas como nativas</span>, ya que son varios los framework
+                        para construir aplicaciones móviles que usan Angular, entre ellos: NativeScript o Ionic.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="row mt-5 pt-5">
+            <div class="col">
+                <a class="text-decoration-none text-success bi bi-arrow-left fs-3" href="index.html"> Volver</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="typescriptModal" tabindex="-1" aria-labelledby="typescriptModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content  bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="typescriptModalLabel">TypeScript</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>TypeScript es un <span class="text-danger fw-bold">lenguaje de programación libre</span> y de
+                        código abierto desarrollado y mantenido por Microsoft.
+                        Es un
+                        <span class="text-danger fw-bold">superconjunto de JavaScript</span>, que esencialmente añade
+                        tipos estáticos y objetos basados en clases. TypeScript
+                        es usado
+                        para desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del
+                        servidor, o
+                        extensiones para
+                        programas (Node.js y Deno).
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mvcModal" tabindex="-1" aria-labelledby="mvcModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content  bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="mvcModalLabel">MVC</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El Modelo Vista Controlador es un estilo de <span class="text-danger fw-bold">arquitectura de
+                            software </span>que separa los datos de una aplicación,
+                        la interfaz de usuario, y la lógica de control en componentes distintos.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

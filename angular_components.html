@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Components</title>
+</head>
+
+<body class="bg-dark text-light">
+
+    <div class="container p-4">
+        <div class="row d-flex align-items-center">
+            <h1 class="text-danger mb-4">Components</h1>
+            <div class="col-6">
+                <p>Son el bloque principal para construir aplicaciones en Angular. </p>
+                <p>Un componente incluye una clase TypeScript con un @<span class="text-primary fw-bold">Component</span>()
+                    decorator, una plantilla HTML y
+                    estilos. </p>
+                <p>El @<span class="text-primary fw-bold">Component</span>() va a especificar la siguiente información:</p>
+                <ul>
+                    <li>Un <span class="text-success fw-bold">selector CSS</span> que define como se usa el componente en la plantilla. Elementos que coinciden
+                        con este selector, pasan a ser instancias del componente</li>
+                    <li>Una <span class="text-success fw-bold">plantilla HTML</span> que le dice a Angular como debe renderizar el componente</li>
+                    <li>Un <span class="text-success fw-bold">set opcional de estilo CSS</span> que define la apariencia de los elementos de la plantilla HTML
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img src="img/ejemplo_componenteSimple.PNG" class="m-2 mb-4 rounded border border-danger" alt="ejemplo">
+            </div>
+            <div class="col-6 text-center">
+                <p>Para usar ese componente, lo escribimos de la siguiente manera en una plantilla:
+                </p>
+            </div>
+            <div class="col-6">
+                <img src="img/ejemplo_componenteTemplate.PNG" class="mb-2 rounded border border-danger" alt="ejemplo">
+            </div>
+            <div class="col-6 text-end">
+                <p>Cuando Angular renderiza este componente, el DOM resultante luce de la siguiente manera:</p>
+            </div>
+            <div class="col-6">
+                <img src="img/ejemplo_componenteDOM.PNG" class="mb-2 rounded border border-danger" alt="ejemplo">
+            </div>
+        </div>
+
+        <div class="row">
+            <h3 class="text-danger text-center mb-4">Creación</h3>
+            <div class="col-4 text-end">
+                <img src="img/ejemplo_componentes.PNG" class="mb-2 rounded border border-danger" alt="ejemplo componentes">
+
+            </div>
+            <div class="col-8">
+                <p>La mejor manera es usando el Angular CLI, pero se puede hacer de manera manual.</p>
+                <ol>
+                    <li>Desde una terminal debemos ir a la ruta donde se encuentra nuestra aplicación</li>
+                    <li>Ejecutamos el comando <span class="text-success fw-bold">ng generate component &lt;nombre-componente&gt;
+                        </span></li>
+                </ol>
+                <p>Este comando creará:</p>
+                <ul>
+                    <li>Un directorio llamado igual que el componente</li>
+                    <li>Un archivo del componente, <span class="text-success fw-bold">&lt;nombre-componente&gt;component.ts</span></li>
+                    <li>Una plantilla, <span class="text-success fw-bold">&lt;nombre-componente&gt;.component.html</span></li>
+                    <li>Un archivo CSS, <span class="text-success fw-bold">&lt;nombre-componente&gt;.component.css</span></li>
+                    <li>Un archivo de especificación de prueba, <span class="text-success fw-bold">&lt;nombre-componente&gt;.component.spec.ts</span></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="row mt-5 pt-5">
+            <div class="col">
+                <a class="text-decoration-none text-success bi bi-arrow-left fs-3" href="angular.html"> Volver</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

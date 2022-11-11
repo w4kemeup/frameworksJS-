@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>React</title>
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-danger mb-4">¿Qué es React?</h1>
+                <div id="queEs">
+                    <div class="row">
+                        <div class="col-8">
+                            <ul>
+                                <li>
+                                    Es una <button type="button" class="fw-bold btn-link bg-dark link-success"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#whyBibliotecaModal">biblioteca</button>muy efectiva, utilizada
+                                    para crear <span class="text-danger">interfaces de
+                                        usuario</span> intuitivas.
+                                </li>
+                                <li>
+                                    De <span class="text-danger">código abierto,</span> creado por Facebook en 2013 y
+                                    mantenido
+                                    por la comunidad de software libre.
+                                </li>
+                                <li>
+                                    Los desarrolladores lo utilizan para ocuparse de la <span class="text-danger">capa
+                                        de
+                                        visualización</span> de aplicaciones y
+                                    sitios complejos.
+                                </li>
+                                <li>
+                                    Es <span class="text-danger">más rápido</span> que otros, entre ellos, Angular.js,
+                                    siendo
+                                    ideal para quienes necesitan un
+                                    framework básico, versátil y rápido.
+                                </li>
+                                <li>
+                                    Destaca por su <span class="text-danger">poco tamaño de registro,</span>
+                                    adaptabilidad,
+                                    similitud con numerosas bibliotecas y
+                                    una <span class="text-danger">curva de aprendizaje
+                                        moderada.</span>
+                                </li>
+                                <li>
+                                    Comprende a la estructura de <span class="text-danger">interfaz de usuario,</span>
+                                    aunque
+                                    también es una
+                                    combinación sólida para crear aplicaciones receptivas de <span
+                                        class="text-danger">una sola
+                                        página</span>
+                                    y aplicaciones de etapas cruzadas.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-4 mb-2 text-center site-logos">
+                            <div class="col">
+                                <img src="img/react_facebook.png">
+                                <img src="img/react_netflix.png">
+                            </div>
+                            <div class="col">
+                                <img src="img/react_scribd.png">
+                                <img src="img/react_dropbox.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-danger">Instalación <span onclick="changeIcon(this)"
+                                class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse"
+                                data-bs-target="#instalacion" aria-expanded="false" aria-controls="instalacion"></span>
+                        </h3>
+                        <div class="collapse" id="instalacion">
+                            <p>Al igual que sucedía con Angular, para instalar React de forma local necesitas:</p>
+                            <ul>
+                                <li>
+                                    Node.js
+                                </li>
+                                <li>
+                                    npm package manager
+                                </li>
+                            </ul>
+                            <h4 class="text-danger">Create React App</h4>
+                            <div class="row align-items-center">
+                                <p>Es un entorno de que viene pre-configurado con todo lo necesario para comenzar tu
+                                    proyecto. Por defecto crea un servidor de desarrollo en tiempo real</p>
+                                <div class="col-6 mb-4 d-flex justify-content-end">
+                                    <img class="rounded border border-danger" src="img/ejemplo_createReactApp.PNG">
+                                </div>
+                                <div class="col-6 mb-4 ">
+                                    <p>Para instalarlo, ejecuta el siguiente código en tu terminal, seguido de la
+                                        carpeta donde
+                                        se va a encontrar tu proyecto</p>
+                                </div>
+                                <div class="col-6 mb-4 d-flex justify-content-end"><img
+                                        class="rounded border border-danger" src="img/ejemplo_createReactApp2.PNG">
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p>Luego de que se instale, necesitas moverte al directorio de tu proyecto para
+                                        crearlo
+                                    </p>
+                                </div>
+                                <div class="col text-center">
+                                    <p>Acto siguiente, se abrirá una ventana en <span
+                                            class="text-success fw-bold">localhost:3000</span> con tu aplicación React
+                                    </p>
+                                    <img class="rounded border border-danger" src="img/ejemplo_createReactApp3.PNG">
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <h3 class="text-danger">Workspace y aplicación inicial <span onclick="changeIcon(this)"
+                            class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse"
+                            data-bs-target="#workspaceInicial" aria-expanded="false"
+                            aria-controls="workspaceInicial"></span>
+                    </h3>
+                    <div id="workspaceInicial" class="collapse">
+                        <p class="text-center fs-5">Luego de haber seguido los pasos anteriores, verás algo así en tu
+                            editor
+                            de código</p>
+                        <div class="row mb-5 align-items-center">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="rounded border border-danger" src="img/ejemplo_reactFolder.PNG">
+                            </div>
+                            <div class="col-4">
+                                <p><span class="text-danger fw-bold">node_modules:</span> contiene las dependencias
+                                    npm del proyecto</p>
+                                <p><span class="text-danger fw-bold">public:</span> esta es la raíz de nuestro
+                                    servidor donde se podrá encontrar el index.html, el archivo principal y el
+                                    favicon. Ese archivo html contiene un elemento &lt;div&gt; con id root, donde se
+                                    cargará tu aplicación de forma dinámica.</p>
+                                <p><span class="text-danger fw-bold">src:</span> es el directorio principal donde
+                                    vamos a colocar los archivos de nuestros componentes. Allí es donde debe estar
+                                    el punto de entrada de javascript en (index.js).</p>
+                            </div>
+
+                        </div>
+                        <div class="row mb-5 align-items-center">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="rounded border border-danger" src="img/ejemplo_reactWorkspace.PNG">
+                            </div>
+                            <div class="col-4">
+                                <p>En index.js se inicializa el componente principal <span
+                                        class="text-danger fw-bold">App.js</span>,
+                                    a través del <span class="text-danger fw-bold">método ReactDOM.Render</span>. Este
+                                    métdoo recibe como primer parámetro
+                                    el componente a renderizar y como segundo el elemento del DOM donde el
+                                    componente va ser renderizado</p>
+                                <p>En la primera línea <span class="text-danger fw-bold">import React</span> se está
+                                    importando la <span class="text-danger fw-bold">librería React</span> y la <span
+                                        class="text-danger fw-bold">clase
+                                        Component</span> de la cual van a heredar todos los componentes que se creen
+                                    mediante
+                                    clases. Éstas requieren del método render() para poder funcionar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-danger">Conceptos clave <span onclick="changeIcon(this)"
+                                class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse"
+                                data-bs-target="#conceptosClave" aria-expanded="false"
+                                aria-controls="conceptosClave"></span>
+                        </h3>
+                        <div id="conceptosClave" class="collapse">
+                            <div class="row mb-2">
+                                <h4 class="text-center text-danger mt-4 mb-2">Virtual DOM</h4>
+                                <div class="col">
+                                    <p>Es una estrategia que utiliza React para <span
+                                            class="text-danger fw-bold">optimizar</span> el desempeño de una aplicación.
+                                        En lugar de confiar solamente en el DOM del navegador, React tiene un virtual
+                                        DOM
+                                        propio.
+                                        Esto deja a la biblioteca determinar qué partes del DOM han cambiado
+                                        <span class="text-danger fw-bold">comparando</span> contenidos entre la versión
+                                        nueva y
+                                        la almacenada en el virtual DOM, y
+                                        utilizando el resultado para determinar cómo actualizar eficientemente el DOM
+                                        del
+                                        navegador.
+                                </div>
+                                </p>
+                            </div>
+                            <div class="row align-items-center mb-2">
+                                <h4 class="text-center text-danger mt-2 mb-2">Propiedades</h4>
+                                <div class="col text-end ">
+                                    <img class="rounded border border-danger" src="img/ejemplo_reactProps.PNG"
+                                        alt="props">
+                                </div>
+                                <div class="col">
+                                    <p>También conocidas como "props", pueden definirse como los <span
+                                            class="text-danger fw-bold">atributos de
+                                            configuración para un componente</span>. Éstas son recibidas desde un nivel
+                                        superior,
+                                        normalmente al realizar la instancia del componente y por definición son
+                                        inmutables.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h4 class="text-center text-danger mt-4">Estado y ciclo de vida</h4>
+                                <p>
+                                    El <span class="text-danger fw-bold">estado de un componente</span> se define como
+                                    una
+                                    representación del mismo en un momento
+                                    concreto, es decir, como una instantánea del propio componente. Existen dos tipos de
+                                    componentes con y sin estado, denominados <span
+                                        class="text-danger fw-bold">statefull</span> y <span
+                                        class="text-danger fw-bold">stateless.</span>
+                                </p>
+                                <p>El <span class="text-danger fw-bold">ciclo de vida</span> es una serie de estados por
+                                    los
+                                    cuales pasan los componentes statefull a
+                                    lo largo de su existencia. Se pueden clasificar en tres etapas de montaje o
+                                    inicialización, actualización y destrucción. Dichas etapas tienen correspondencia en
+                                    diversos métodos:
+                                <ul>
+                                    <li><span class="text-danger fw-bold">shouldComponentUpdate(nextProps,
+                                            nextState)</span>: permite al
+                                        desarrollador prevenir el re-renderizado innecesario de
+                                        un componente, devolviendo falso si no es necesario. Recibe dos parametros, las
+                                        nuevas propiedades y el nuevo estado.</li>
+
+                                    <li>
+                                        <span class="text-danger fw-bold">componentDidMount():</span> es llamado una vez
+                                        que
+                                        el componente es "montado", es decir, ha
+                                        sido creado en la interfaz de usuario. Este es el lugar adecuado para realizar
+                                        peticiones AJAX, setIntervals o integrar librerías de terceros.
+                                    </li>
+                                    <li>
+                                        <span class="text-danger fw-bold">componentWillUnmount():</span> es llamado
+                                        inmediatamente antes de que el componente es
+                                        "desmontado". Es comúnmente usado para limpiar la demanda de dependencias del
+                                        componente
+                                        que no será simplemente removido con el desmontaje del componente. Es ideal para
+                                        realizar operaciones de limpieza como listeners de eventos o temporizadores.
+                                    </li>
+                                    <li>
+                                        <span class="text-danger fw-bold">render():</span> es el método más importante
+                                        de
+                                        los ciclos de vida y el único requerido en
+                                        cualquier componente. Es usualmente llamado cada vez que el estado del
+                                        componente es
+                                        actualizado, reflejando los cambios en la interfaz de usuario.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row align-items-center">
+                                <h4 class="text-center text-danger mt-4">JSX</h4>
+                                <div class="col">
+                                    <p>React utiliza una sintaxis parecida a HTML, llamada JSX o JavaScript XML. No es
+                                        necesaria para utilizar
+                                        React, sin embargo, hace el código más legible, y escribirlo es una experiencia
+                                        similar
+                                        a HTML aunque en funcionalidad sea más parecido a Javascript</p>
+                                </div>
+                                <div class="col">
+                                    <img class="rounded border border-danger" src="img/ejemplo_jsx.PNG">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-danger">¿Cómo funciona? <span onclick="changeIcon(this)"
+                                class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse"
+                                data-bs-target="#funciona" aria-expanded="false" aria-controls="funciona"></span>
+                        </h3>
+                        <div class="collapse" id="funciona">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <p>Para comprender cómo funciona React es clave que nos situemos en un contexto,
+                                        pues cuando
+                                        se aprende desarrollo web se obtiene conocimiento de tres conceptos básicos:</p>
+                                    <ul>
+                                        <li>
+                                            HTML
+                                        </li>
+                                        <li>
+                                            CSS
+                                        </li>
+                                        <li>
+                                            JavaScript
+                                        </li>
+                                    </ul>
+                                    <p>Antes de React estos conceptos <span class="text-danger fw-bold">funcionaban por
+                                            separado</span>, en diferentes
+                                        archivos y carpetas, por lo que escalar y extraer diversas partes del código
+                                        para
+                                        reutilizar o migrar funcionalidades era más complicado.
+
+                                        Por esto, los ingenieros de Facebook decidieron incluir todo en un solo paquete,
+                                        al que
+                                        llamaron “componente”. <span class="text-danger fw-bold">En los componentes, la
+                                            estructura HTML y JS son
+                                            inseparables, y combinables con CSS</span>.
+
+                                        Esto hizo posible la implementación de una <span>nueva notación</span> que hace
+                                        más
+                                        eficiente el desarrollo de aplicaciones escalables: JSX </p>
+                                    <p>
+                                        Lo que hace React es, a través de código JSX, crear una representación en
+                                        memoria del
+                                        DOM; denominada <span class="text-danger fw-bold">“Virtual DOM”</span>, a partir
+                                        de la
+                                        cual luego crea el DOM
+                                        definitivo en el navegador. Este “Virtual DOM”, a diferencia del DOM común, pesa
+                                        muy
+                                        poco y utiliza escasos recursos para ser creado. Así que, en caso de que un
+                                        componente
+                                        cambiase su estado, y con ello la información a renderizar, React compararía los
+                                        cambios
+                                        realizados en el Virtual DOM, vería qué elemento o elementos han cambiado, y
+                                        actualizaría solo esas partes en el DOM real. Al tratarse solo y exclusivamente
+                                        de
+                                        código JavaScript, el compilado y renderizado de todos estos cambios se realiza
+                                        rápidamente.</p>
+                                </div>
+                                <div class="col">
+                                    <img class="rounded border border-danger"
+                                        src="https://miro.medium.com/max/1400/1*QeLLWTfen9y9p89k9M2AdA.png"
+                                        alt="virtual dom" height="400px">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-danger">¿Cuándo usar React? <span onclick="changeIcon(this)"
+                                class="bi bi-caret-right-fill text-white" data-bs-toggle="collapse"
+                                data-bs-target="#whenReact" aria-expanded="false" aria-controls="whenReact"></span>
+                        </h3>
+                        <div class="collapse" id="whenReact">
+                            <ul>
+                                <li class="mb-2">
+                                    Cuando se trabaja a nivel de frontend en una <span class="text-danger fw-bold">interfaz que requiere altos niveles de
+                                    interacción.</span>
+                                </li>
+                                <li class="mb-2">
+                                    <span class="text-danger fw-bold">Cuando el código base de tu web se está haciendo muy extenso</span> y complicado de
+                                    mantener,
+                                    haciendo difícil el testeo.
+                                </li>
+                                <li class="mb-2">
+                                    Cuando <span class="text-danger fw-bold">tu sitio web se demora en cargar</span> y hay páginas que no responden, ya que esto
+                                    puede
+                                    ser signo de que hay muchos elementos recargando el DOM.
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 pt-5">
+                <div class="col">
+                    <a class="text-decoration-none text-success bi bi-arrow-left fs-3" href="index.html"> Volver</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="whyBibliotecaModal" tabindex="-1" aria-labelledby="whyBiblioteca"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content  bg-dark">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="whyBiblioteca">¿Por qué una biblioteca?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Los frameworks como Angular y Vue ofrecen todo lo necesario para construir una aplicación
+                            completa, pero <span class="text-danger fw-bold">en el caso de React no es así</span>, ya
+                            que por defecto no incluye todas las
+                            librerías necesarias para la mayoría de proyectos. Usualmente React se utiliza en conjunto
+                            con otras
+                            bibliotecas.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+</body>
+
+</html>

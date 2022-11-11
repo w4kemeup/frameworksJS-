@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Dependency Injection</title>
+</head>
+
+<body class="bg-dark text-light">
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-danger mb-4">Dependency Injection</h1>
+                    <div class="col">
+                        <p>La inyección de dependencia es un patrón de diseño en el que <span class="fw-bold text-danger">una clase solicita dependencias
+                            de
+                            fuentes externas en lugar de crearlas,</span> extrayendo la responsabilidad de creación de
+                            instancias de un componente para delegarla en otro. </p>
+                        <p>Existen dos roles principales en este sistema: <span class="fw-bold text-danger">el que consume dependencias y el que provee
+                            dependencias.</span> Angular facilita la comunicación entre estos roles a través de una abstracción
+                            llamada <span class="fw-bold text-danger">inyector.</span></p>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="row">
+                    <h3 class="text-danger mb-4">Servicios y componentes</h3>
+                    <div class="col">
+                        <p> Angular <span class="text-danger fw-bold">distingue los componentes de los servicios</span>
+                            para aumentar la modularización y la
+                            reutilización. Al separar la funcionalidad relacionada con la vista de un componente de
+                            otros
+                            tipos de procesamiento, puedes hacer que tus componentes sean ágiles y eficientes.</p>
+                        <div class="row mb-4">
+                            <div class="col">
+                                Un <span class="text-success fw-bold">servicio</span> es una categoría amplia que abarca
+                                cualquier valor, función o característica
+                                que
+                                necesite una aplicación. Un servicio es típicamente una clase con un propósito limitado
+                                y bien
+                                definido. Debe hacer algo específico y hacerlo bien.
+                            </div>
+                            <div class="col">
+                                Un <span class="text-success fw-bold">componente</span> se encarga de permitir la
+                                experiencia del usuario. Un
+                                componente debe presentar propiedades y métodos para el enlace de datos, para mediar
+                                entre la vista (representada por la plantilla) y la lógica de la aplicación (que a
+                                menudo incluye
+                                alguna noción de modelo).
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <p>
+                                    Un componente puede <span class="text-danger fw-bold">delegar ciertas tareas a los
+                                        servicios</span>, como
+                                    obtener datos del
+                                    servidor, validar la entrada del usuario o registrar información directamente en la
+                                    consola.
+                                    Al definir tales tareas de procesamiento en una clase de servicio inyectable, hace
+                                    que esas
+                                    tareas sean disponibles para cualquier componente.
+                                </p>
+                                <p><span>Los componentes consumen servicios</span>, es posible inyectar un servicio en
+                                    un
+                                    componente, dándole al componente acceso a ese servicio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <h3 class="text-danger mb-4">Dependencias</h3>
+                    <div class="col">
+                        <p>Las dependencias son servicios u objetos que una clase necesita para cumplir su función. </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row d-flex align-items-center">
+                    <h4 class="text-center text-danger mb-4">Proveer dependencias</h4>
+                    <div class="col-4 mb-4 text-end">
+                        <img class="rounded border border-danger" src="img/angular_injection.PNG">
+                    </div>
+                    <div class="col-8 mb-4">
+                        <p>En este ejemplo, se está definiendo la clase HeroService para que actúe de <span
+                                class="text-danger fw-bold">dependencia de un
+                                componente.</span> Esto se hace con el decorador @Injectable</p>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <p class="text-center fs-5">Lo siguiente es hacer que esa clase recién creada quede disponible,
+                            para lo cual hay
+                            varias formas:</p>
+                    </div>
+                    <div class="col-8 mb-4 text-end">
+                        <p><span class="text-danger fw-bold">A nivel del componente</span>, usando el <span
+                                class="text-success fw-bold">campo providers del decorador @Component.</span> En este
+                            caso el servicio creado queda disponible para todas las instancias de este componente
+                            y otros componentes y directivas utilizadas en esta plantilla.</p>
+                    </div>
+                    <div class="col-4 mb-4">
+                        <img class="rounded border border-danger" src="img/angular_injection2.PNG">
+                    </div>
+                    <div class="col-4 mb-4 text-end">
+                        <img class="rounded border border-danger" src="img/angular_injection3.PNG">
+                    </div>
+                    <div class="col-8 mb-4">
+                        <p><span class="text-danger fw-bold">A nivel de NgModule</span>, también usando el <span
+                                class="text-success fw-bold">campo providers, pero del decorador
+                                @NgModule.</span> En este caso, el servicio está disponible para
+                            todos los componentes, directivas y pipes declarados en este NgModule.</p>
+                    </div>
+                    <div class="col-8 mb-4 text-end">
+                        <p><span class="text-danger fw-bold">A nivel root de la aplicación</span>, lo cual se hace
+                            agregandole el campo <span class="text-success fw-bold">providedIn: 'root'</span> al
+                            decorador @Injectable</p>
+                    </div>
+                    <div class="col-4 mb-4">
+                        <img class="rounded border border-danger" src="img/angular_injection4.PNG">
+                    </div>
+                </div>
+<hr>
+                <div class="row d-flex align-items-center">
+                    <h4 class="text-center text-danger mb-4">Inyectar dependencias</h4>
+                    <div class="col-6 mb-4 text-end">
+                        <img class="rounded border border-danger" src="img/angular_injection5.PNG">
+                    </div>
+                    <div class="col-6 mb-4">
+                        La forma más común de inyectar una dependencia es <span class="text-danger fw-bold">declararla en un constructor de clase.</span>
+                        Cuando Angular crea una nueva instancia de un componente, directiva o pipe, determina qué
+                        servicios u otras dependencias requiere al fijarse en los tipos de parámetros del
+                        constructor.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 pt-5">
+            <div class="col">
+                <a class="text-decoration-none text-success bi bi-arrow-left fs-3" href="angular.html"> Volver</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

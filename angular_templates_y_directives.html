@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Templates y Directives</title>
+</head>
+
+<body class="bg-dark text-light">
+
+    <div class="container p-4">
+        <div class="row d-xlex align-items-center">
+            <h1 class="text-danger mb-4 text-center">Templates</h1>
+            <p>Cada componente tiene un <span class="fw-bold text-danger">template HTML </span>que declara como un componente se renderiza. El desarrollador define
+                este template mediante código o ruta de archivo.</p>
+            <p>Angular agrega <span class="fw-bold text-danger">elementos de sintaxis que extienden el HTML</span> para que se puedan insertar valores
+                dinámicos desde el propio componente.</p>
+            <div class="col-6 mb-4 text-end">
+                <p>Luego <span class="fw-bold text-danger">Angular actualiza el DOM renderizado cuando tu componente es modificado</span>, un ejemplo sería la
+                    inserción de texto dinámico:</p>
+            </div>
+            <div class="col-6 mb-4">
+
+                <img src="img/ejemplo_template.PNG" class="mb-2 rounded border border-danger" alt="ejemplo template">
+            </div>
+            <div class="col-6 mb-4 text-end">
+
+                <p>El valor del mensaje viene de la <span class="fw-bold text-danger">clase componente:</span></p>
+            </div>
+            <div class="col-6 mb-4">
+
+                <img src="img/ejemplo_templateMensaje.PNG" class="mb-2 rounded border border-danger"
+                    alt="ejemplo template">
+            </div>
+            <div class="col mb-4 text-end">
+                <p>Cuando se carga la aplicacion, se carga el <span class="fw-bold text-danger">componente</span> y su <span class="fw-bold text-danger">template</span>, el usuario ve el siguiente
+                    mensaje:</p>
+
+            </div>
+            <div class="col mb-4">
+                <img src="img/ejemplo_templateMensaje2.PNG" class="mb-2 rounded border border-danger"
+                    alt="ejemplo template">
+
+            </div>
+            <p>Las llaves dobles <span class="text-warning">{{ }}</span> le indican a Angular que debe interpolar el
+                contenido dentro de ellas.</p>
+            <hr>
+            <div class="col-6 mb-4">
+                <img src="img/ejemplo_template3.PNG" class="mb-2 rounded border border-danger" alt="">
+
+            </div>
+            <div class="col-6 mb-4">
+                <p>Además soporta <span class="text-danger">enlaces de propiedad</span> (property binding), lo que le
+                    permite al desarrollador establecer valores
+                    para propiedades
+                    y atributos
+                    de elementos HTML y pasar valores a la lógica de presentación.
+                </p>
+
+            </div>
+
+
+            <p>Con el uso de paréntesis rectos <span class="text-warning">[[ ]]</span> le indicamos que queremos
+                unir la propiedad o atributo a un valor del componente.</p>
+            <hr>
+
+            <div class="col-6 mb-4">
+                <p>Podemos declarar <span class="fw-bold text-danger">escuchas de evento</span> para escuchar y responder a las acciones del usuario, ejemplo
+                    pulsaciones de teclas, movimientos del mouse, clicks y toques.</p>
+                <p>El desarrollador declara la escucha de evento especificando el nombre del evento entre paréntesis:</p>
+
+            </div>
+            <div class="col-6 mb-4">
+                <img src="img/ejemplo_templateEscuchaEvento.PNG" class="mb-2 rounded border border-danger" alt="">
+
+            </div>
+
+            <hr>
+            <div class="col mb-4 text-center">
+                <p>El siguiente ejemplo es una combinación de <span class="text-danger fw-bold">interpolación</span>, <span class="text-danger fw-bold">enlaces de propiedad</span> y <span class="text-danger fw-bold">enlaces de eventos</span>,
+                    dentro de un template de Angular: </p>
+
+                <div class="row mb-4">
+                    <div class="col"><img src="img/ejemplo_interpolacion1.PNG" class="mb-2 rounded border border-danger"
+                            alt=""></div>
+                    <div class="col"><img src="img/ejemplo_interpolacion2.PNG" class="mb-2 rounded border border-danger"
+                            alt=""></div>
+
+                </div>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="row d-flex align-items-center">
+            <h1 class="text-danger mb-4 text-center">Directives</h1>
+            <div class="col mb-2">
+                <img src="img/directivas.PNG" class="mb-2 rounded border border-danger" alt="directivas">
+            </div>
+            <div class="col mb-4">
+                <p>Directives extienden la funcionalidad del HTML usando para ello una nueva sintaxis. Con ella
+                    podemos usar lógica que será ejecutada en el DOM (Document Object Model). Agregan nuevo
+                    comportamiento o modifican el existente de los elementos en el template. Cada Directiva que usamos
+                    tiene un nombre, y determina donde puede ser usada, sea en un elemento, atributo, componente o
+                    clase.</p>
+                <p>Se crean ejecutando el comando CLI <span class="text-success fw-bold">ng generate directive
+                        nombre-directiva</span></p>
+
+                <p>Un <span class=" text-danger fw-bold">Component</span> es una <span
+                        class="text-danger fw-bold">directive
+                        con template</span>. <span class="text-danger fw-bold">@Component</span> es un decorator <span
+                        class="text-danger fw-bold">@Directive</span> extendido con características propiedas de los
+                    templates.</p>
+            </div>
+            <hr>
+            <h3 class="text-danger">Structural directives (ngIf, ngFor, ngSwitch)</h3>
+            <div class="col-12 mb-4">
+                <ul>
+                    <li><strong class="text-primary">ngIf</strong> esta directiva se utiliza cuando quieres mostrar algún bloque HTML solo
+                        si cumple con
+                        ciertas condiciones. </li>
+                    <li><strong class="text-primary">ngFor:</strong> se utiliza para cuando necesites que un bloque se repita varias veces.
+                    </li>
+                    <li><strong class="text-primary">ngSwitch:</strong> esta directiva te permite agregar una sentencia switch con varios
+                        valores y casos para
+                        seleccionar. </li>
+                </ul>
+            </div>
+            <div class="col-6 mb-4">
+                <p>Cuando se aplican, generalmente adelante llevan un asterisco <span
+                        class="text-danger fw-bold">*</span>,
+                    ejemplo *<span class="text-primary fw-bold">ngIf</span>. Esta
+                    abreviación, Angular la interpreta y la convierte a una forma más larga, a un <span
+                        class="text-primary fw-bold">&lt;ng-template&gt;</span> que rodea al elemento "huésped" y a sus
+                    descendientes.
+                </p>
+            </div>
+            <div class="col-6 mb-4">
+                <img src="img/directivaEstructural1.PNG" class="mb-2 rounded border border-danger" alt="">
+            </div>
+            <div class="col-6 mb-4">
+                <p>Angular crea un <span class="text-primary fw-bold">&lt;ng-template&gt;</span>, le aplica la directiva *<span
+                        class="text-primary fw-bold">ngIf</span> y se convierte en un <span class="text-danger fw-bold">property
+                        binding</span> entre parténtesis, [ <span class="text-primary fw-bold">ngIf</span> ]. El resto de la
+                    div, incluida el atributo de clase, se mueve adentro del <span
+                        class="text-primary fw-bold">&lt;ng-template&gt;</span> :</p>
+            </div>
+            <div class="col-6 mb-4">
+
+                <img src="img/directivaEstructural2.PNG" class="mb-2 rounded border border-danger" alt="">
+            </div>
+            <div class="col mb-4">
+                <p>Angular <span class="text-danger fw-bold">NO</span> crea un <span
+                        class="text-primary fw-bold">&lt;ng-template&gt;</span> real, sólo renderiza la div.</p>
+                <p>Sólo se puede aplicar <span class="text-danger fw-bold">UNA</span> structural directive a un
+                    elemento, en caso contrario el compilador lo tomaría como un error. La razón: simplicidad,
+                    structural directives realizan tareas complejas.</p>
+
+            </div>
+        </div>
+        <hr>
+        <h3 class="text-danger">Attribute directives (NgClass, NgStyle, NgModel)</h3>
+        <div class="row d-flex align-items-center">
+
+        
+        <div class="col-12 mb-4">
+            <ul>
+                <li><strong class="text-primary">NgClass:</strong> esta directiva añade estilo condicional utilizando una clase.</li>
+                <li><strong class="text-primary">NgStyle:</strong> añade estilo condicional en la línea.</li>
+                <li><strong class="text-primary">NgModel:</strong> Esto te permite hacer un enlace bidireccional. Esto significa que
+                    puedes pasar datos en
+                    ambas direcciones entre el archivo HTML y TypeScript. Ejemplo, muestra una propiedad de datos, y
+                    se actualiza cuando el usuario realiza cambios. </li>
+            </ul>
+        </div>
+        <div class="col-7 mb-4">
+            <img src="img/ngStyle.PNG" class="mb-2 rounded border border-danger" alt="">
+
+        </div>
+        <div class="col-5 mb-4">
+            <p>Podemos utilizar <span class="text-primary fw-bold">NgStyle</span> para definir varios estilos
+                simultáneamente, basado en el estado del componente. En el siguiente ejemplo, <span
+                    class="fw-bold">setCurrentStyle()</span> establece la propiedad <span
+                    class="fw-bold">currentStyles</span> con un objeto que define 3 estilos.</p>
+        </div>
+        <div class="col-8 mb-4">
+            <img class="rounded border border-danger" src="img/ngStyle2.PNG" alt="">
+        </div>
+        <div class="col-4 mb-4">
+            <p>Para establecer el estilo del elemento, agregamos un property binding <span
+                    class="text-primary fw-bold">NgStyle</span> a <span class="fw-bold">setCurrentStyle()</span> </p>
+        </div>
+    </div>
+        <div class="row mt-5 pt-5">
+            <div class="col-6 mb-4">
+                <a class="text-decoration-none text-success bi bi-arrow-left fs-3" href="angular.html"> Volver</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
