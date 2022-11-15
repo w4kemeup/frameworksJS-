@@ -301,6 +301,78 @@
                                     </ul>
                                 </div>
                             </div>
+                            <hr>
+                            <div class="row d-flex align-items-center">
+                                <div class="col">
+                                    <h4 class="text-center text-danger mt-2 mb-2">Plantillas</h4>
+                                    <p>En el núcleo de Vue.js se encuentra un sistema que nos permite procesar datos de
+                                        forma declarativa al DOM mediante una sintaxis de plantilla similar a la
+                                        representación de un template string pero en este caso los datos y el DOM están
+                                        vinculados y todo es reactivo.</p>
+                                    <p>Sintaxis basada en HTML que permite vincular de forma
+                                        declarativa el DOM renderizado a los datos de la instancia de Vue subyacente.
+                                    </p>
+                                    <p> Vue compila las templates en funciones de renderizado del DOM virtual.
+                                        Combinado con el sistema de reactividad, Vue puede averiguar de manera
+                                        inteligente el número mínimo de componentes para volver a renderizar y aplicar
+                                        la cantidad mínima de manipulacion del DOM cuando el estado de la aplicacion
+                                        cambia.</p>
+                                    <div class="row">
+                                        <h5 class="text-center text-danger mt-2 mb-2">Interpolaciones</h5>
+                                        <p class="text-center">Formas de vinculación entre los datos y el DOM</p>
+                                        <div class="col">
+                                            <div class="col">
+                                                <p class="text-center text-danger fw-bold">De texto:</p>
+                                                <div class="text-center">
+                                                    <img src="img/vue_templateText.PNG" class="border rounded border-danger" alt="">
+                                                </div>
+                                                <p>La etiqueta se reemplazará con el valor de la propiedad msg en la
+                                                    instancia del
+                                                    componente correspondiente. También se actualizará cada vez que allí
+                                                    cambie esta
+                                                    propiedad.</p>
+                                            </div>
+                                            <div class="col">
+                                                <p class="text-center text-danger fw-bold">HTML puro:</p>
+                                                <div class="text-center">
+                                                    <img src="img/vue_templateRaw.PNG" class="border rounded border-danger" alt="">
+                                                </div>
+                                                <p>Las llaves doble se interpretan como texto plano, no
+                                                    HTML. Para generar HTML real, deberá utilizar la directiva <span
+                                                        class="text-success fw-bold">v-html</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="col border-start">
+                                            <div class="col">
+                                                <p class="text-center text-danger fw-bold">Atributos:</p>
+                                                <div class="text-center">
+                                                    <img src="img/vue_templateAttribute.PNG" class="border rounded border-danger" alt="">
+                                                </div>
+                                                <p>Las llaves doble no se pueden utilizar dentro de los atributos HTML.
+                                                    En
+                                                    su lugar, se usa una directiva <span
+                                                        class="text-success fw-bold">v-bind.</span></p>
+                                            </div>
+                                            <div class="col">
+                                                <p class="text-center text-danger fw-bold">Expresiones Javascript:</p>
+                                                <div class="text-center">
+                                                    <img src="img/vue_templateExpressions.PNG" class="border rounded border-danger" alt="">
+                                                </div>
+                                                <p>
+                                                    Estas expresiones se evaluarán como JavaScript en el ámbito de la
+                                                    instancia del componente. Una restricción es que cada enlace
+                                                    solo puede contener <span class="text-danger fw-bold">una expresión</span>. No puede contener declaraciones
+                                                    ni control de flujo (reemplazar por expresiones ternarias).
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <h4 class="text-center text-danger mt-2 mb-2">Eventos</h4>
+                            </div>
                         </div>
                     </div>
 
