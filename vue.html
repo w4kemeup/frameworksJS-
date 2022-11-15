@@ -41,6 +41,16 @@
                             declarativo</span> y <span class="text-danger">basado en componentes</span>.
                     </li>
                 </ul>
+                <img src="img/vue_ejemploMinimal1.PNG" class="mb-3 border rounded border-danger" alt="">
+                <img src="img/vue_ejemploMinimal2.PNG" class="border rounded border-danger" alt="">
+                <p>En este ejemplo podemos observar dos conceptos claves de <span class="fw-bold">Vue</span> :</p>
+                <ul>
+                    <li><span class="text-danger fw-bold">Declarative Rendering</span> : nos permite renderizar data en
+                        el DOM usando una sintaxis de plantilla,basado en el estado de JavaScript. Las llaves dobles se
+                        utilizan como marcadores de posición para interpolar los datos requeridos en el DOM. </li>
+                    <li><span class="text-danger fw-bold">Reactivity</span> : Vue rastrea automáticamente los cambios de
+                        estado de JavaScript y actualiza de manera eficiente el DOM cuando ocurren cambios. </li>
+                </ul>
             </div>
             <div class="col-4 mb-2 text-center site-logos">
                 <div class="col">
@@ -76,7 +86,7 @@
                                     <p>Requisitos previos:</p>
                                     <ul>
                                         <li>Familiaridad con la línea de comandos.</li>
-                                        <li>Tener instalado Node.js en su versión 16.0 o más actual.</li>
+                                        <li>Tener instalado Node.js en su versión más actual.</li>
                                     </ul>
                                     <p class="mt-5">Primero, en la línea de comandos, ejecutar el comando <span
                                             class="text-success">npm init vue@latest</span>:</p>
@@ -207,17 +217,68 @@
                             aria-controls="conceptos-clave"></span>
                     </h3>
                     <div class="collapse" id="conceptos-clave">
-                        <ul>
+                        <!-- <ul>
                             <li class="text-danger fw-bold"><a class="link-danger"
                                     href="vue_componentes.html">Componentes</a></li>
                             <li class="text-danger fw-bold">Plantillas</li>
-                            <li class="text-danger fw-bold">Directivas</li>
+                            <li class="text-danger fw-bold"><a href="">Directivas</a> </li>
                             <li class="text-danger fw-bold">Eventos</li>
                             <li class="text-danger fw-bold">Reactividad</li>
                             <li class="text-danger fw-bold">Routing</li>
-                        </ul>
+                        </ul> -->
+                        <div class="container p-4">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-center text-danger mt-2 mb-2">Componentes</h4>
+                                    <p>En la mayoría de los proyectos de Vue habilitados para herramientas de
+                                        compilación, creamos
+                                        componentes de Vue utilizando un formato de archivo similar a HTML llamado <span
+                                            class="text-primary">Single-File Component</span> (también conocido como
+                                        files, abreviado
+                                        como SFC). </p>
+                                    <p>Un Vue SFC, como su nombre indica, encapsula la lógica del componente
+                                        (JavaScript), la plantilla
+                                        (HTML) y los estilos (CSS) en un solo archivo.
+                                    </p>
+                                    <p>SFC es una característica definitoria de Vue y es la forma recomendada de crear
+                                        componentes de
+                                        Vuesisu caso de uso justifica una configuración de compilación.
+                                    </p>
+                                    <p>Ejemplo en formato SFC:</p>
+                                    <img src="img/vue_singleFileComponent.PNG" class="mb-2" alt="">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-center text-danger mt-2 mb-2">Directivas</h4>
+                                    <p>Las directivas son instrucciones o atributos para que Vue haga las cosas de
+                                        cierta manera. </p>
+                                    <p>Llevan el prefijo <span class="fw-bold text-danger">v-</span> que indican que es
+                                        específico
+                                        de Vue y no parte del HTML nativo.</p>
+                                    <ul class="fw-bold">
+                                        <li>v-text</li>
+                                        <li>v-html</li>
+                                        <li>v-show</li>
+                                        <li>v-if</li>
+                                        <li>v-else</li>
+                                        <li>v-else-if</li>
+                                        <li>v-for</li>
+                                        <li>v-on</li>
+                                        <li>v-bind</li>
+                                        <li>v-model</li>
+                                        <li>v-slot</li>
+                                        <li>v-pre</li>
+                                        <li>v-once</li>
+                                        <li>v-memo</li>
+                                        <li>v-cloak</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <hr>
+
                 </div>
             </div>
         </div>
