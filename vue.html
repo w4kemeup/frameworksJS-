@@ -245,59 +245,122 @@
                                         Vuesisu caso de uso justifica una configuración de compilación.
                                     </p>
                                     <p>Ejemplo en formato SFC:</p>
-                                    <img src="img/vue_singleFileComponent.PNG" class="mb-2 border border-rounded border-danger" alt="">
+                                    <img src="img/vue_singleFileComponent.PNG"
+                                        class="mb-2 border border-rounded border-danger" alt="">
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col">
                                     <h4 class="text-center text-danger mt-2 mb-2">Directivas</h4>
-                                    <p>Las directivas son instrucciones o atributos para que Vue haga las cosas de
-                                        cierta manera. </p>
-                                    <p>Llevan el prefijo <span class="fw-bold text-warning">v-</span> que indican que es
-                                        específico
-                                        de Vue y no parte del HTML nativo.</p>
+                                    <div class="text-center">
+                                        <p>Las directivas son instrucciones o atributos para que Vue haga las cosas de
+                                            cierta manera. </p>
+                                        <p>Llevan el prefijo <span class="fw-bold text-warning">v-</span> que indican
+                                            que es
+                                            específico
+                                            de Vue y no parte del HTML nativo.</p>
+                                    </div>
                                     <ul>
-                                        <li><span class="fw-bold text-warning">v-text</span> : Actualiza el contenido de
-                                            texto de un elemento</li>
-                                        <img src="img/vue_vtxt.PNG" class="border rounded border-danger" alt="">
-                                        <li><span class="fw-bold text-warning">v-html</span> : Actualiza el innerHTML de
-                                            un elemento</li>
-                                        <img src="img/vue_vhtml.PNG" class="border rounded border-danger" alt="">
-                                        <li><span class="fw-bold text-warning">v-show</span> : Alterna la visibilidad
-                                            del
-                                            elemento en función de
-                                            la veracidad del valor de la expresión</li>
-                                        <li><span class="fw-bold text-warning">v-if</span> : Renderiza condicionalmente
-                                            un elemento o un fragmento
-                                            de plantilla en función de la veracidad del valor de la expresión</li>
-                                        <img src="img/vue_ifelse.PNG" class="border rounded border-danger" alt="">
-                                        <li><span class="fw-bold text-warning">v-else</span></li>
-                                        <li><span class="fw-bold text-warning">v-else-if</span></li>
-                                        <img src="img/vue_elseif.PNG" class="border rounded border-danger" alt="">
-                                        <li><span class="fw-bold text-warning">v-for</span> : Renderiza el elemento o el
-                                            bloque de plantilla varias veces en función de los datos de origen</li>
-                                        <img src="img/vue_for.PNG" class="border rounded border-danger" alt="">
-                                        <li><span class="fw-bold text-warning">v-on</span> : Adjunta una escucha de
-                                            evento al elemento</li>
-                                        <img src="img/vue_on.PNG" alt="">
-                                        <li><span class="fw-bold text-warning">v-bind</span> : Enlaza dinámicamente uno
-                                            o más atributos, o una propiedad de componente a una expresión</li>
-                                        <img src="img/vue_bind.PNG" class="border rounded border-danger" alt="">
-                                        <li><span class="fw-bold text-warning">v-model</span> : Crea un enlace
-                                            bidireccional en un elemento de entrada de formulario o un componente</li>
-
-                                        <li><span class="fw-bold text-warning">v-slot</span></li>
-                                        <li><span class="fw-bold text-warning">v-pre</span> : Omite la compilación de
-                                            este elemento y todos sus elementos hijos</li>
-                                        <img src="img/vue_pre.PNG" class="border rounded border-danger" alt="">
-                                        <li><span class="fw-bold text-warning">v-once</span> : Renderiza el elemento y
-                                            el componente una sola vez y omita las actualizaciones futuras</li>
-                                        <li><span class="fw-bold text-warning">v-memo</span></li>
-                                        <img src="img/vue_once.PNG" class="border rounded border-danger" alt="">
-                                        <li><span class="fw-bold text-warning">v-cloak</span> : Se utiliza para ocultar
-                                            la plantilla sin compilar hasta que esté lista</li>
-                                        <img src="img/vue_cloak.PNG" class="border rounded border-danger" alt="">
+                                        <div class="row justify-content-around mb-5">
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-text</span> : Actualiza el
+                                                    contenido de
+                                                    texto de un elemento</li>
+                                                <img src="img/vue_vtxt.PNG" class="border rounded border-danger" alt="">
+                                            </div>
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-html</span> : Actualiza el
+                                                    innerHTML de
+                                                    un elemento</li>
+                                                <img src="img/vue_vhtml.PNG" class="border rounded border-danger"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-around mb-5">
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-show</span> : Alterna la
+                                                    visibilidad
+                                                    del
+                                                    elemento en función de
+                                                    la veracidad del valor de la expresión</li>
+                                            </div>
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-if</span> : Renderiza
+                                                    condicionalmente
+                                                    un elemento o un fragmento
+                                                    de plantilla en función de la veracidad del valor de la expresión
+                                                </li>
+                                                <img src="img/vue_ifelse.PNG" class="border rounded border-danger"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-around mb-5">
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-else</span></li>
+                                                <img src="img/v-else.PNG" class="border rounded border-danger"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-else-if</span></li>
+                                                <img src="img/vue_elseif.PNG" class="border rounded border-danger"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-around mb-5">
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-for</span> : Renderiza el
+                                                    elemento o el
+                                                    bloque de plantilla varias veces en función de los datos de origen
+                                                </li>
+                                                <img src="img/vue_for.PNG" class="border rounded border-danger" alt="">
+                                            </div>
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-on</span> : Adjunta una escucha
+                                                    de
+                                                    evento al elemento</li>
+                                                <img src="img/vue_on.PNG" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-around mb-5">
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-bind</span> : Enlaza
+                                                    dinámicamente uno
+                                                    o más atributos, o una propiedad de componente a una expresión</li>
+                                                <img src="img/vue_bind.PNG" class="border rounded border-danger" alt="">
+                                            </div>
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-model</span> : Crea un enlace
+                                                    bidireccional en un elemento de input form o en un
+                                                    componente</li>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-around mb-5">
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-pre</span> : Omite la
+                                                    compilación de
+                                                    este elemento y todos sus elementos hijos</li>
+                                                <img src="img/vue_pre.PNG" class="border rounded border-danger" alt="">
+                                            </div>
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-once</span> : Renderiza el
+                                                    elemento y
+                                                    el componente una sola vez y omita las actualizaciones futuras</li>
+                                                    <img src="img/vue_once.PNG" class="border rounded border-danger" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-around mb-5">
+                                            <div class="col-4">
+                                                <li><span class="fw-bold text-warning">v-cloak</span> : Se utiliza para
+                                                    ocultar
+                                                    la plantilla sin compilar hasta que esté lista</li>
+                                                <img src="img/vue_cloak.PNG" class="border rounded border-danger"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-4">
+                                                
+                                            </div>
+                                        </div>
                                     </ul>
                                 </div>
                             </div>
@@ -422,11 +485,16 @@
                                 <h5 class="text-danger fw-bold mt-2">Modificadores de teclas</h5>
                                 <div class="col">
                                     <p>Cuando escuchamos eventos de teclado, a menudo necesitamos verificar códigos de
-                                        teclas comunes. Esto se puede realizar con el código de la tecla o utilizando los alias que Vue le da a las teclas más utilizadas</p>
-                                        <img class="border rounded border-danger mb-2" src="img/vue_evento7.PNG" alt="eventosVue">
-                                        <img class="border rounded border-danger mb-2" src="img/vue_evento8.PNG" alt="eventosVue">
-                                        <p>Los alias que ofrece Vue son: .enter, .tab, .delete (delete y backspace), .esc, .space, .up, .down, .left, .right</p>
-                                        <p>También puede definir alias modificadores de tecla personalizados a través del objeto global config.keyCodes </p>
+                                        teclas comunes. Esto se puede realizar con el código de la tecla o utilizando
+                                        los alias que Vue le da a las teclas más utilizadas</p>
+                                    <img class="border rounded border-danger mb-2" src="img/vue_evento7.PNG"
+                                        alt="eventosVue">
+                                    <img class="border rounded border-danger mb-2" src="img/vue_evento8.PNG"
+                                        alt="eventosVue">
+                                    <p>Los alias que ofrece Vue son: .enter, .tab, .delete (delete y backspace), .esc,
+                                        .space, .up, .down, .left, .right</p>
+                                    <p>También puede definir alias modificadores de tecla personalizados a través del
+                                        objeto global config.keyCodes </p>
                                 </div>
                             </div>
                         </div>
